@@ -1,16 +1,10 @@
-name: CI
-
+name: 'Tag HEAD'
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
   workflow_dispatch:
     inputs:
       git_tag:
         description: 'Git tag to create'
         default: '$RANDOM'
-
 jobs:
   push_git_tag:
     runs-on: ubuntu-latest
