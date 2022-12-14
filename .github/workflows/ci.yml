@@ -18,6 +18,5 @@ jobs:
     - name: Create and push git tag
       run: |
         TAG=${{ github.event.inputs.git_tag }}
-#        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
         git tag $TAG
         git push origin $TAG
